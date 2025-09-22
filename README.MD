@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api'
+    implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-v1.1.0'
 }
 ```
 
