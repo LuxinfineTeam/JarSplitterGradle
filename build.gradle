@@ -4,7 +4,7 @@ apply plugin: 'maven-publish'
 group = 'com.github.LuxinfineTeam'
 version = 'v1.1.0'
 
-def jarFile = file('JarSplitterGradle-' + version + '.jar')
+def jarFile = file('JarSplitterAPI-' + version + '.jar')
 
 //Выключаем пересборку jar
 tasks.withType(Jar).configureEach {
