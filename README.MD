@@ -4,14 +4,24 @@
 
 # Пример подключения в `build.gradle`
 ```groovy
-//TODO: пример подключения самого плагина
+buildscript {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        ...
+        // Замените ${VERSION} на актуальную версию
+        classpath "com.github.LuxinfineTeam:JarSplitterGradle:${VERSION}"
+    }
+}
 
 repositories {
     maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation 'com.github.LuxinfineTeam:JarSplitterGradle:v1.0.0'
+    implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api'
 }
 ```
 
