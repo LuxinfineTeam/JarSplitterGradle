@@ -1,14 +1,24 @@
 apply plugin: 'java'
+apply plugin: 'maven-publish'
 
-repositories {
-	mavenCentral()
-}
+group = 'com.github.LuxinfineTeam'
+version = 'v1.0.0'
 
-task sourceJar(type: Jar) {
-	classifier = 'sources'
-	from sourceSets.main.allSource
+def jarFile = file('JarSplitterGradle-' + version + '.jar')
+
+//Выключаем пересборку jar
+tasks.withType(Jar).configureEach {
+	enabled = false
 }
 
 artifacts {
-	archives file('JarSplitter-Gradle-1.0.0.jar')
+	archives jarFile
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			artifact jarFile
+		}
+	}
 }
