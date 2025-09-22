@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+repositories {
+	mavenCentral()
+}
+
+task sourceJar(type: Jar) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+artifacts {
+	archives file('JarSplitter-Gradle-1.0.0.jar')
+}
