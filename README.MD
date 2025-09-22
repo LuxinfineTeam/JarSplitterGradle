@@ -30,3 +30,5 @@ dependencies {
 - `buildServer` - сборка серверной версии Jar
 - `buildDev` - сборка DEV версии Jar. По сути, это сборка мода БЕЗ распила с деобфускацией майнкрафт маппингов. Да, можно получить такой jar и вручную, но таск чисто для удобства
 - `buildAll` - сборка всех 3 версий Jar
+
+# Актуальная версия плагина: [![](https://jitpack.io/v/LuxinfineTeam/JarSplitterGradle.svg)](https://jitpack.io/#LuxinfineTeam/JarSplitterGradle)
