@@ -2,23 +2,27 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 group = 'com.github.LuxinfineTeam'
-version = 'v1.1.2'
-
-def jarFile = file("${projectDir}/JarSplitterGradle-${version}.jar")
+version = 'v1.1.3'
 
 //Выключаем пересборку jar
 tasks.withType(Jar).configureEach {
-	enabled = false
+    enabled = false
 }
 
-artifacts {
-	archives jarFile
+//Перенос файла из корня в build/libs/ (долбанный jitpack ищет там релиз теперь)
+task prepareJar(type: Copy) {
+    from "${projectDir}/JarSplitterGradle-${version}.jar"
+    into "$buildDir/libs"
 }
 
 publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			artifact jarFile
-		}
-	}
+    publications {
+        mavenJava(MavenPublication) {
+            artifact("$buildDir/libs/JarSplitterGradle-${version}.jar")
+        }
+    }
+}
+
+tasks.named("publish").configure {
+    dependsOn prepareJar
 }
