@@ -2,23 +2,23 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 group = 'com.github.LuxinfineTeam'
-version = 'v1.1.0'
+version = 'v1.1.4'
 
 def jarFile = file('JarSplitterGradle-' + version + '.jar')
 
 //Выключаем пересборку jar
 tasks.withType(Jar).configureEach {
-	enabled = false
+    enabled = false
 }
 
 artifacts {
-	archives jarFile
+    archives jarFile
 }
 
 publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			artifact jarFile
-		}
-	}
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jarFile
+        }
+    }
 }
