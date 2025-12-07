@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'maven-publish'
 
 group = 'com.github.LuxinfineTeam'
-version = 'v1.1.4'
+version = 'v1.1.5'
 
 def jarFile = file('JarSplitterGradle-' + version + '.jar')
 
