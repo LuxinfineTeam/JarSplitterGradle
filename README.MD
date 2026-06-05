@@ -23,7 +23,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-v1.1.1'
+    //Для 1.7.10 forge
+    implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.7.10-v1.1.1'
+    //Для 1.21.1 neoforge
+    //implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.21.1-neo-v1.0.0'
 }
 ```
 
