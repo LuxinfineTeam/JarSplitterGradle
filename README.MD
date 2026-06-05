@@ -11,8 +11,7 @@ buildscript {
     }
     dependencies {
         ...
-        // Замените ${VERSION} на актуальную версию
-        classpath "com.github.LuxinfineTeam:JarSplitterGradle:${VERSION}"
+        classpath "com.github.LuxinfineTeam:JarSplitterGradle:plugin-SNAPSHOT"
     }
 }
 
@@ -24,9 +23,9 @@ repositories {
 
 dependencies {
     //Для 1.7.10 forge
-    implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.7.10-v1.1.1'
+    implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.7.10-SNAPSHOT'
     //Для 1.21.1 neoforge
-    //implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.21.1-neo-v1.0.0'
+    //implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.21.1-neo-SNAPSHOT'
 }
 ```
 
@@ -35,5 +34,3 @@ dependencies {
 - `buildServer` - сборка серверной версии Jar
 - `buildDev` - сборка DEV версии Jar. По сути, это сборка мода БЕЗ распила с деобфускацией майнкрафт маппингов. Да, можно получить такой jar и вручную, но таск чисто для удобства
 - `buildAll` - сборка всех 3 версий Jar
-
-# Актуальная версия плагина: [![](https://jitpack.io/v/LuxinfineTeam/JarSplitterGradle.svg)](https://jitpack.io/#LuxinfineTeam/JarSplitterGradle)
