@@ -24,6 +24,8 @@ repositories {
 dependencies {
     //Для 1.7.10 forge
     implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.7.10-SNAPSHOT'
+    //Для 1.12.2 forge
+    //implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.12.2-SNAPSHOT'
     //Для 1.21.1 neoforge
     //implementation 'com.github.LuxinfineTeam:JarSplitterGradle:api-1.21.1-neo-SNAPSHOT'
 }
