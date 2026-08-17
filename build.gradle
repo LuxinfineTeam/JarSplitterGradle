@@ -31,12 +31,6 @@ publishing {
                     asmTreeDep.appendNode('version', '9.10.1')
                     asmTreeDep.appendNode('scope', 'runtime')
 
-                    def asmAnalysisDep = dependenciesNode.appendNode('dependency')
-                    asmAnalysisDep.appendNode('groupId', 'org.ow2.asm')
-                    asmAnalysisDep.appendNode('artifactId', 'asm-analysis')
-                    asmAnalysisDep.appendNode('version', '9.10.1')
-                    asmAnalysisDep.appendNode('scope', 'runtime')
-
                     def fastutilDep = dependenciesNode.appendNode('dependency')
                     fastutilDep.appendNode('groupId', 'it.unimi.dsi')
                     fastutilDep.appendNode('artifactId', 'fastutil')
